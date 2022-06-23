@@ -8,20 +8,13 @@ const mongoose = require('mongoose');
 
 router.get('/',(req, res, next) => {
     Customer.find()
-    .select("name balance")
     .exec()
     .then(doc => {
         console.log(doc)
         const response = {
             count : doc.length,
-            customer: doc.map(doc => {
-                return{
-                    name: doc.name,
-                    balance: doc.balance,
-                    _id : doc._id,
-                    
-                }
-            })
+            customers: doc
+            
         }
         res.status(200).json(response)
     })
