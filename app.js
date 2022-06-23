@@ -8,8 +8,8 @@ const multer = require('multer');
 const mongoose = require("mongoose");
 
 
-// const URI = "mongodb+srv://1234:1234@cluster0.pwuj2.mongodb.net/?retryWrites=true&w=majority";
-const URI="mongodb://localhost:27017/student";
+const URI = "mongodb+srv://1234:1234@cluster0.pwuj2.mongodb.net/?retryWrites=true&w=majority";
+// const URI="mongodb://localhost:27017/student";
 console.log(URI)
 mongoose.connect(URI, {
 
