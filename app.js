@@ -39,10 +39,13 @@ app.use((req,res, next)=>{
 });
 
 const customerRoutes = require('./api/routes/customers');
+const transactionRoutes = require('./api/routes/transactions');
+// const { translateAliases } = require('./api/models/customer');
 
 
 
 app.use('/customers', customerRoutes);
+app.use('/transactions',transactionRoutes)
 
 
 
