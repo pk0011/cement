@@ -19,10 +19,7 @@ router.get('/',(req, res, next) => {
                     name: doc.name,
                     balance: doc.balance,
                     _id : doc._id,
-                    request: {
-                        type: "GET",
-                        url : "http://localhost:3000/customers/"+doc._id
-                    }
+                    
                 }
             })
         }
