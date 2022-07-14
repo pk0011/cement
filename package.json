@@ -4,8 +4,11 @@
   "description": "a simple accounting app",
   "main": "index.js",
   "scripts": {
+    
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "set NODE_ENV=developement&& server server.js",
+    "start-prod": "set NODE_ENV=production&& server server.js"
+
   },
   "author": "mayank singh",
   "license": "ISC",
@@ -18,5 +21,8 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.4",
     "nodemon": "^2.0.16"
+  },
+  "engines": {
+    "node": "16.15.0"
   }
 }

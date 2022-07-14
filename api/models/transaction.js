@@ -6,7 +6,11 @@ const transactionSchema = mongoose.Schema({
     customer: {type: mongoose.Schema.Types.ObjectId, ref : 'Customer', required: true},
     amount: {type: Number, default: 0},
     txn_type: {type:Boolean, required: true},
-    date: {type: Date, require: true}
+    date: {type: Date, require: true},
+    description: { type: String},
+    cur_bal : {type: Number, default: 0},
+    bill_date : {type: String, require: true},
+    active : {type:Boolean, required: true, default: 1},
 })
 
 module.exports = mongoose.model('Transaction', transactionSchema);
